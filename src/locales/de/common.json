@@ -1,0 +1,18 @@
+{
+  "header": {
+    "title": "Musiknoten"
+  },
+  "itemCount_one": "1 Titel",
+  "itemCount_other": "{{count}} Titel",
+  "printablePage": {
+    "actions": {
+      "close": "Schließen",
+      "print": "Drucken"
+    },
+    "title": "Inhaltsverzeichnis"
+  },
+  "tabBar": {
+    "folders": "Ordner",
+    "library": "Bibliothek"
+  }
+}
