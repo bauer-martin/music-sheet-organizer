@@ -24,7 +24,7 @@ export function PrintablePage() {
         if (!folder) {
             return undefined
         }
-        return Array.from(folder.sheets).sort((a, b) => a.title.localeCompare(b.title))
+        return folder.sheets
     }, [folder])
 
     if (route.path !== 'print/:folder' || !folder || !sheets) {
