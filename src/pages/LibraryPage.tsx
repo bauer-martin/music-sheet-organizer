@@ -25,9 +25,16 @@ export function LibraryPage() {
                 groups.get(firstCharacter)!.push({ key: sheet.key, folderTitle: folder.title, sheetTitle: sheet.title })
             }
         }
-        return Array.from(groups.entries(), ([sectionHeader, entries]) => ({ sectionHeader, entries })).sort((a, b) =>
-            a.sectionHeader.localeCompare(b.sectionHeader)
-        )
+        return Array.from(groups.entries(), ([sectionHeader, entries]) => ({
+            sectionHeader,
+            entries: entries.sort((a, b) => {
+                const comparison = a.sheetTitle.localeCompare(b.sheetTitle)
+                if (comparison !== 0) {
+                    return comparison
+                }
+                return a.folderTitle.localeCompare(b.folderTitle)
+            }),
+        })).sort((a, b) => a.sectionHeader.localeCompare(b.sectionHeader))
     }, [])
 
     const totalCount = useMemo(() => sheetGroups.reduce((acc, group) => acc + group.entries.length, 0), [sheetGroups])
