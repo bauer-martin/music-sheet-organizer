@@ -122,8 +122,9 @@ const rawDataSet: Record<string, string[]> = {
         'I Do It For You',
         'Unchained Melody',
     ],
-    Schwarz: ['Sensation', 'Home Of The Range'],
-    'School Of Ragtime/Scott': [
+    Schwarz: [
+        'Sensation',
+        'Home Of The Range',
         'Auld Lang Syne',
         'The Entertainer',
         'Heliotrope Bouquet',
